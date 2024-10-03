@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Account Details{% endblock %}
+
+{% block content %}
+<h2>Account Details</h2>
+
+<form method="POST">
+    <label for="usr_name">Username:</label>
+    <input type="text" id="usr_name" name="usr_name" value="{{ user.usr_name }}" placeholder="New Username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="New Password">
+
+    <input type="submit" name="update" value="Update Account">
+</form>
+
+<form method="POST">
+    <input type="submit" name="delete" value="Delete Account" onclick="return confirm('Are you sure you want to delete your account?');">
+</form>
+
+<a href="{{ url_for('home') }}">Back to Home</a>
+{% endblock %}

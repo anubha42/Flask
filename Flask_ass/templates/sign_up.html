@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title%}
+    Sign up
+{% endblock %}
+{% block content %}
+<form action="#" method="post">
+	<p><input type="email" name="email" placeholder="Enter email" value="{{email if email}}"/></p>
+	<p><input type="password" name="password" placeholder="Enter password" value="{{password if password}}"/></p>
+    <p><input type="usr_name" name="usr_name" placeholder="Enter user name" value="{{usr_name if usr_name}}"/></p>
+	<p><input type="submit" value="submit"/></p>
+</form>
+{% endblock %}
